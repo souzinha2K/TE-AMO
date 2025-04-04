@@ -1,0 +1,447 @@
+body {
+    background-color: #0b0e11;
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Fonte mais simples e elegante */
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content {
+    width: 70%;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #101822;
+    border-bottom: 2px solid #3a3f4b;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.profile-header:hover {
+    background-color: #131a27;
+    transform: scale(1.01);
+}
+
+.username {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 5px rgba(255, 105, 180, 0.5); }
+    50% { box-shadow: 0 0 15px rgba(255, 105, 180, 0.9); }
+    100% { box-shadow: 0 0 5px rgba(255, 105, 180, 0.5); }
+}
+
+.level-box {
+    background-color: #1f2a38;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+    display: inline-block;
+    animation: pulseGlow 2s infinite;
+}
+
+.activity {
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro translúcido */
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para efeito de borda */
+}
+.game-card {
+    background-color: #2a475e;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+    flex-wrap: wrap;
+}
+
+.game-card:hover {
+    transform: scale(1.02);
+    background-color: #36506a;
+}
+
+.game-card h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.3);
+    
+}
+
+.game-card small {
+    font-size: 15px; 
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+}
+
+.game-logo {
+    padding: 5px;
+    width: 120px;  /* Mantendo proporcional */
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid rgba(255, 20, 147, 0.9); /* Contorno mais próximo */
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.8); /* Brilho mais sutil */
+    position: relative;
+}
+
+.sidebar {
+    background-color: #101822;
+    padding: 15px;
+    border-radius: 10px;
+    width: 25%;
+}
+
+/* Avatar styles */
+.avatar-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Hover avatar - initially invisible */
+.avatar-hover {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* When hover, make the hover image visible */
+.avatar-container:hover .avatar-hover {
+    opacity: 1;
+}
+
+/* When hover, apply the rotation to the original image */
+.avatar-container:hover .avatar {
+    transform: rotateY(180deg);
+}
+
+body {
+    background: linear-gradient(to right, #6a0dad, #8e44ad);
+    color: white;
+    font-family: 'Roboto', sans-serif; /* Fonte atualizada */
+    margin: 0;
+    padding: 0;
+}
+
+.username {
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+    color: #fff5f5;
+}
+
+.heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    bottom: 0;
+    font-size: 24px; /* Tamanho do coração */
+    color: red; /* Cor do coração */
+    opacity: 0.8;
+    animation: floatUp linear infinite;
+}
+
+.love-counter {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#timer {
+    text-align: center; /* Centraliza o texto */
+    display: block; /* Garante que ocupa toda a largura disponível */
+    font-size: 18px; /* Ajuste do tamanho da fonte */
+    font-weight: bold; /* Deixa o texto mais destacado */
+    margin-top: 10px; /* Adiciona um espaçamento superior */
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.6); /* Fundo escuro translúcido */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;  /* Mantém fixo no rodapé */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-center {
+    justify-content: center;
+    width: 100%;
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Aumenta o espaço entre a imagem e o texto */
+}
+
+
+.footer .game-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .game-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.footer .title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.footer small {
+    display: block;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo preto translúcido */
+    padding: 15px;
+    border-radius: 10px;
+    width: 25%;
+    text-align: center; /* Centraliza o texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante que emojis e textos fiquem alinhados corretamente */
+}
+.sidebar-title {
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 1), 0px 0px 12px rgba(0, 0, 0, 1);
+    max-width: 90%; /* Limite para o contorno */
+    overflow-wrap: break-word; /* Quebra o texto se necessário */
+}
+
+.sidebar-title .icon-heart {
+    font-size: 30px;
+    margin: 0 5px;
+}
+
+.sidebar p {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #5e2a8c; /* Tom de roxo mais escuro para o texto */
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.sidebar .icon-calendar, 
+.sidebar .icon-heart, 
+.sidebar .icon-location,
+.sidebar .icon-favorite,
+.sidebar .icon-ring,
+.sidebar .icon-message,
+.sidebar .icon-clock {
+    font-size: 22px;
+    color: #9c4de6; /* Ícones em tom de roxo */
+}
+
+.sidebar p:hover {
+    color: #9c4de6; /* Cor roxa ao passar o mouse */
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Perfil com fundo arredondado */
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #101822;
+    border-bottom: 2px solid #3a3f4b;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 15px; /* Adiciona bordas arredondadas */
+}
+
+.profile-header:hover {
+    background-color: #131a27;
+    transform: scale(1.01);
+}
+/* Contorno brilhante no título "Informações do Nosso Amor" */
+.sidebar-title {
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 1), 0px 0px 12px rgba(0, 0, 0, 1); /* Contorno preto brilhante */
+}
+
+/* Contorno branco brilhante nos textos abaixo */
+.sidebar p {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    text-shadow: 0px 0px 8px rgba(255, 0, 0, 0.8), 0px 0px 12px rgba(255, 0, 0, 0.8); /* Contorno branco brilhante */
+}
+
+.hidden-text {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0 0 5px white;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-text-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px #ff69b4;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-text-btn:hover {
+    background-color: #ff1493;
+}
+
+.show-text {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .username {
+        font-size: 24px;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+    }
+    
+    .game-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .game-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .sidebar-title {
+        font-size: 20px;
+    }
+    
+    .sidebar p {
+        font-size: 16px;
+    }
+    
+    .footer {
+        position: relative;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .toggle-text-btn {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    .heart {
+        font-size: 18px;
+    }
+}
+
